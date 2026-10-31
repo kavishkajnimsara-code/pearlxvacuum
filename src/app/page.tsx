@@ -8,6 +8,7 @@ import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -42,7 +43,10 @@ export default function Home() {
       {/* Escapora Dark Footer */}
       <Footer />
 
-      {/* Floating WhatsApp Action Button */}
+      {/* Floating Back to Top Button (Bottom Left) */}
+      <BackToTop />
+
+      {/* Floating WhatsApp Action Button (Bottom Right) */}
       <FloatingWhatsApp />
     </div>
   );
