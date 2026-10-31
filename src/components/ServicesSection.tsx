@@ -88,22 +88,23 @@ export default function ServicesSection() {
   const pkg = packages[activeIdx];
 
   return (
-    <section id="packages" className="py-20 lg:py-28 bg-slate-50/80 border-y border-slate-200/70 relative">
+    <section id="packages" className="py-14 sm:py-20 lg:py-28 bg-slate-50/80 border-y border-slate-200/70 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-row items-end justify-between mb-8 sm:mb-12 gap-4">
           <div>
-            <h2 className="text-3xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em]">
-              Specialized <span className="text-red-600 font-medium">Vacuum Packages.</span>
+            <h2 className="text-2xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em] leading-tight">
+              Specialized <br className="sm:hidden" />
+              <span className="text-red-600 font-medium">Vacuum Packages.</span>
             </h2>
           </div>
 
           {/* Escapora Slider Arrows */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button
               onClick={handlePrev}
-              className={`w-12 h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
                 pressedBtn === "prev"
                   ? "bg-red-600 text-white border-red-600 shadow-md shadow-red-600/30"
                   : "bg-white text-slate-700 border-slate-200 hover:bg-red-600 hover:text-white hover:border-red-600 hover:shadow-md hover:shadow-red-600/20 shadow-sm"
@@ -114,7 +115,7 @@ export default function ServicesSection() {
             </button>
             <button
               onClick={handleNext}
-              className={`w-12 h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
                 pressedBtn === "next"
                   ? "bg-red-600 text-white border-red-600 shadow-md shadow-red-600/30"
                   : "bg-white text-slate-700 border-slate-200 hover:bg-red-600 hover:text-white hover:border-red-600 hover:shadow-md hover:shadow-red-600/20 shadow-sm"
@@ -127,26 +128,26 @@ export default function ServicesSection() {
         </div>
 
         {/* Escapora Signature Package Card Banner */}
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[500px]">
+        <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[420px] sm:min-h-[500px]">
             
             {/* Left Content Side (6 cols) */}
-            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-14 flex flex-col justify-between">
+            <div className="lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col justify-between order-2 lg:order-1">
               <div>
-                {/* Title + Italic Subtitle (Escapora Style) */}
-                <h3 className="text-2xl sm:text-4xl font-medium text-slate-900 mb-4 tracking-[-0.03em] leading-tight">
+                {/* Title + Subtitle */}
+                <h3 className="text-xl sm:text-4xl font-medium text-slate-900 mb-3 sm:mb-4 tracking-[-0.03em] leading-tight">
                   {pkg.title}{" "}
                   <span className="font-medium text-red-600">
                     {pkg.italicSubtitle}
                   </span>
                 </h3>
 
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8 font-normal">
+                <p className="text-xs sm:text-base text-slate-600 leading-relaxed mb-6 sm:mb-8 font-normal">
                   {pkg.description}
                 </p>
 
                 {/* Bullets Grid with Checkmarks */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-7 sm:mb-10">
                   {pkg.bullets.map((bullet, bIdx) => (
                     <div key={bIdx} className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700">
                       <div className="w-4 h-4 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0">
@@ -159,7 +160,7 @@ export default function ServicesSection() {
               </div>
 
               {/* Escapora Action Row: Red Pill + Phone Widget */}
-              <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-100">
+              <div className="flex flex-wrap items-center gap-6 pt-5 sm:pt-6 border-t border-slate-100">
                 <a
                   href={`https://wa.me/94743678100?text=${encodeURIComponent(pkg.msg)}`}
                   target="_blank"
@@ -168,7 +169,7 @@ export default function ServicesSection() {
                     setPressedBtn("wa");
                     setTimeout(() => setPressedBtn(null), 600);
                   }}
-                  className={`inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-medium text-white shadow-md transition-all hover:scale-[1.02] active:scale-95 ${
+                  className={`w-full sm:w-auto justify-center inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white shadow-md transition-all hover:scale-[1.02] active:scale-95 ${
                     pressedBtn === "wa"
                       ? "bg-[#25D366] shadow-emerald-500/25"
                       : "bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] shadow-red-600/20"
@@ -188,7 +189,7 @@ export default function ServicesSection() {
             </div>
 
             {/* Right Image Side (6 cols) */}
-            <div className="lg:col-span-6 relative min-h-[350px] lg:min-h-full bg-slate-900">
+            <div className="lg:col-span-6 relative min-h-[240px] sm:min-h-[350px] lg:min-h-full bg-slate-900 order-1 lg:order-2">
               <Image
                 src={pkg.image}
                 alt={pkg.title}

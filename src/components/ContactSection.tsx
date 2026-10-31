@@ -25,39 +25,39 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-slate-50/70 border-t border-slate-200/60 relative">
+    <section id="contact" className="py-14 sm:py-20 lg:py-28 bg-slate-50/70 border-t border-slate-200/60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em] mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em] mb-3 sm:mb-4">
             Contact & <span className="text-red-600 font-medium">Walk-In Location.</span>
           </h2>
-          <p className="text-base text-slate-600 font-normal">
+          <p className="text-sm sm:text-base text-slate-600 font-normal">
             Conveniently situated along Baseline Road in Kirulapone with easy customer parking. Walk-ins are served on the spot!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           
           {/* Left Column: Direct Info Cards & Escapora Inquiry Form */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6">
             
             {/* Quick Contact Info Strip */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               {/* Hotline Card */}
-              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-4">
-                    <Phone className="w-6 h-6" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-3.5 sm:mb-4">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div className="text-xs uppercase font-medium tracking-wider text-slate-400 mb-1">
                     Direct Hotline
                   </div>
                   <a
                     href="tel:0743678100"
-                    className="text-2xl font-medium text-slate-900 hover:text-red-600 transition-colors block tracking-tight"
+                    className="text-xl sm:text-2xl font-medium text-slate-900 hover:text-red-600 transition-colors block tracking-tight"
                   >
                     074 367 8100
                   </a>
@@ -75,15 +75,15 @@ export default function ContactSection() {
               </div>
 
               {/* Working Hours Card */}
-              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div className="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-4">
-                    <Clock className="w-6 h-6" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-3.5 sm:mb-4">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div className="text-xs uppercase font-medium tracking-wider text-slate-400 mb-1">
                     Operating Hours
                   </div>
-                  <div className="text-2xl font-medium text-slate-900 tracking-tight">
+                  <div className="text-xl sm:text-2xl font-medium text-slate-900 tracking-tight">
                     8:30 AM – 8:00 PM
                   </div>
                   <div className="text-xs text-slate-500 mt-1 font-normal">
@@ -99,14 +99,14 @@ export default function ContactSection() {
             </div>
 
             {/* Escapora "Request a Quote" Form Card */}
-            <div className="bg-white p-7 sm:p-9 rounded-3xl border border-slate-200 shadow-xl">
+            <div className="bg-white p-5 sm:p-9 rounded-3xl border border-slate-200 shadow-xl">
               <div className="flex items-center gap-2 mb-2">
                 <MessageCircle className="w-5 h-5 text-red-600" />
-                <h3 className="text-xl font-medium text-slate-900 tracking-tight">
+                <h3 className="text-lg sm:text-xl font-medium text-slate-900 tracking-tight">
                   Request a Quote
                 </h3>
               </div>
-              <p className="text-xs text-slate-500 mb-6 font-normal">
+              <p className="text-xs text-slate-500 mb-5 sm:mb-6 font-normal">
                 Tell us what you need packed and we'll instantly connect you with our Kirulapone packing desk.
               </p>
 
@@ -172,7 +172,7 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-8 rounded-full text-sm font-medium text-white bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] transition-all shadow-md shadow-red-600/25 hover:shadow-emerald-500/25 hover:scale-[1.02] active:scale-95"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 sm:px-8 rounded-full text-sm font-medium text-white bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] transition-all shadow-md shadow-red-600/25 hover:shadow-emerald-500/25 hover:scale-[1.02] active:scale-95"
                 >
                   <Image
                     src="/images/whatsapp-cta.png"
@@ -200,17 +200,17 @@ export default function ContactSection() {
             <div className="bg-white p-3 sm:p-4 rounded-3xl border border-slate-200 shadow-xl flex flex-col gap-3 h-full">
               
               {/* Responsive Google Maps Iframe with Curved Corners */}
-              <div className="relative w-full min-h-[460px] lg:min-h-[540px] flex-1 bg-slate-100 rounded-2xl overflow-hidden">
+              <div className="relative w-full min-h-[320px] sm:min-h-[460px] lg:min-h-[540px] flex-1 bg-slate-100 rounded-2xl overflow-hidden">
                 <iframe
                   title="Pearl-X Kirulapone Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0772!2d79.8732485!3d6.8835212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b0039034a5d%3A0x7c39e9bdd879392e!2sPearl%20-%20X%20%23Vacuum%20Packing!5e0!3m2!1sen!2slk!4v1730200000000!5m2!1sen!2slk"
                   width="100%"
                   height="100%"
-                  style={{ border: 0, minHeight: "460px" }}
+                  style={{ border: 0 }}
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full"
+                  className="w-full h-full min-h-[320px] sm:min-h-[460px] lg:min-h-[540px]"
                 />
               </div>
 
@@ -219,7 +219,7 @@ export default function ContactSection() {
                 href="https://maps.app.goo.gl/KwbGziWSJjtMKwvc6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 px-6 bg-red-600 hover:bg-red-700 text-white rounded-2xl flex items-center justify-center gap-2.5 text-sm font-medium transition-all shadow-md shadow-red-600/20 hover:scale-[1.01] active:scale-95"
+                className="w-full py-3.5 sm:py-4 px-5 sm:px-6 bg-red-600 hover:bg-red-700 text-white rounded-2xl flex items-center justify-center gap-2 text-xs sm:text-sm font-medium transition-all shadow-md shadow-red-600/20 hover:scale-[1.01] active:scale-95"
               >
                 <Navigation className="w-4 h-4" />
                 <span>Open Location in Google Maps</span>

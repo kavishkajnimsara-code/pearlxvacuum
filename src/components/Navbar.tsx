@@ -38,15 +38,15 @@ export default function Navbar() {
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md py-3"
-            : "bg-white py-3.5"
+            ? "bg-white/95 backdrop-blur-md py-2.5 sm:py-3"
+            : "bg-white py-3 sm:py-3.5"
         }`}
       >
-        <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr]">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-10 lg:px-14 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr]">
           
           {/* Pearl-X Brand Logo (Attached Oval Badge) */}
           <Link href="/" className="flex items-center gap-3 group shrink-0 lg:justify-self-start">
-            <div className="relative h-12 w-28 sm:h-14 sm:w-32 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-10 w-24 sm:h-14 sm:w-32 transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/images/pearl-x-logo.png"
                 alt="Pearl-X Vacuum Packing Logo"

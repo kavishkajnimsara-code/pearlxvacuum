@@ -71,7 +71,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section id="why-us" className="py-24 lg:py-32 bg-white text-slate-900 relative overflow-hidden">
+    <section id="why-us" className="py-14 sm:py-24 lg:py-32 bg-white text-slate-900 relative overflow-hidden">
       
       {/* Subtle background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-red-50/70 blur-[120px] pointer-events-none" />
@@ -79,45 +79,45 @@ export default function BenefitsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Escapora Light Centered Headline */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-slate-900">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-[-0.03em] leading-[1.12] mb-4 sm:mb-6 text-slate-900">
             Why we're your <br />
             <span className="text-red-600 font-medium">
               perfect travel partner.
             </span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
+          <p className="text-sm sm:text-lg text-slate-600 font-normal leading-relaxed">
             Engineered vacuum packaging, heavy-gauge barrier films, and 7-day express walk-in service in Colombo.
           </p>
         </div>
 
         {/* 3 Core Cards (Escapora Light Card Style) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 mb-12 sm:mb-20">
           {benefits.map((benefit, idx) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={idx}
-                className="bg-white p-8 sm:p-9 rounded-3xl border border-slate-200/80 hover:border-red-300 shadow-lg shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1.5 flex flex-col group"
+                className="bg-white p-6 sm:p-9 rounded-3xl border border-slate-200/80 hover:border-red-300 shadow-lg shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1.5 flex flex-col group"
               >
                 {/* Icon Circle */}
-                <div className="w-14 h-14 rounded-2xl bg-red-50 border border-red-100 text-red-600 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all duration-300">
-                  <Icon className="w-7 h-7" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-red-50 border border-red-100 text-red-600 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-105 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all duration-300">
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
 
-                <div className="text-xs uppercase font-medium tracking-wider text-red-600 mb-2">
+                <div className="text-xs uppercase font-medium tracking-wider text-red-600 mb-1.5 sm:mb-2">
                   {benefit.title}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-3 tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2.5 sm:mb-3 tracking-tight">
                   {benefit.headline}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed mb-8 font-normal">
+                <p className="text-sm text-slate-600 leading-relaxed mb-6 sm:mb-8 font-normal">
                   {benefit.description}
                 </p>
 
                 {/* Subpoints */}
-                <div className="mt-auto pt-6 border-t border-slate-100 space-y-2.5">
+                <div className="mt-auto pt-5 sm:pt-6 border-t border-slate-100 space-y-2.5">
                   {benefit.points.map((pt, pIdx) => (
                     <div key={pIdx} className="flex items-center gap-2.5 text-xs text-slate-700 font-normal">
                       <CheckCheck className="w-4 h-4 text-red-600 shrink-0" />
@@ -131,30 +131,30 @@ export default function BenefitsSection() {
         </div>
 
         {/* 3-Step Walk-In Process */}
-        <div className="bg-slate-50/90 rounded-3xl p-8 sm:p-12 border border-slate-200/80 mb-20">
-          <div className="text-center max-w-xl mx-auto mb-12">
+        <div className="bg-slate-50/90 rounded-3xl p-6 sm:p-12 border border-slate-200/80 mb-12 sm:mb-20">
+          <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl font-medium text-slate-900 mb-2 tracking-tight">
               Simple 3-Step <span className="text-red-600 font-medium">Walk-In Process</span>
             </h3>
-            <p className="text-sm text-slate-600 font-normal">
+            <p className="text-xs sm:text-sm text-slate-600 font-normal">
               No complicated reservations required. Walk straight into our Kirulapone branch.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7 sm:gap-8">
             {steps.map((st, sIdx) => {
               const StepIcon = st.icon;
               return (
                 <div key={sIdx} className="flex flex-col items-center text-center group">
-                  <div className="relative mb-5">
-                    <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 text-red-600 shadow-sm flex items-center justify-center group-hover:border-red-300 group-hover:bg-red-50 transition-colors">
-                      <StepIcon className="w-8 h-8 text-red-600" />
+                  <div className="relative mb-4 sm:mb-5">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-slate-200 text-red-600 shadow-sm flex items-center justify-center group-hover:border-red-300 group-hover:bg-red-50 transition-colors">
+                      <StepIcon className="w-7 h-7 sm:w-8 sm:h-8 text-red-600" />
                     </div>
                     <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[11px] font-medium w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow">
                       {sIdx + 1}
                     </span>
                   </div>
-                  <h4 className="text-base sm:text-lg font-medium text-slate-900 mb-2">{st.title}</h4>
+                  <h4 className="text-base sm:text-lg font-medium text-slate-900 mb-1.5 sm:mb-2">{st.title}</h4>
                   <p className="text-xs text-slate-600 max-w-xs leading-relaxed font-normal">{st.desc}</p>
                 </div>
               );
@@ -163,19 +163,19 @@ export default function BenefitsSection() {
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
           {stats.map((stat, idx) => (
             <div
               key={idx}
-              className="bg-slate-50/80 p-6 sm:p-8 rounded-2xl border border-slate-200/80 text-center hover:border-red-200 transition-colors"
+              className="bg-slate-50/80 p-4 sm:p-8 rounded-2xl border border-slate-200/80 text-center hover:border-red-200 transition-colors"
             >
-              <div className="text-3xl sm:text-4xl font-medium text-slate-900 mb-1.5 tracking-tight">
+              <div className="text-2xl sm:text-4xl font-medium text-slate-900 mb-1 sm:mb-1.5 tracking-tight">
                 {stat.value}
               </div>
-              <div className="text-xs uppercase font-medium tracking-wider text-red-600 mb-1">
+              <div className="text-[11px] sm:text-xs uppercase font-medium tracking-wider text-red-600 mb-1">
                 {stat.label}
               </div>
-              <div className="text-xs text-slate-600 font-normal">
+              <div className="text-[11px] sm:text-xs text-slate-600 font-normal leading-snug">
                 {stat.desc}
               </div>
             </div>

@@ -5,16 +5,16 @@ import { Check, ArrowRight } from "lucide-react";
 
 export default function DiscoverSection() {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-white relative">
+    <section id="services" className="py-14 sm:py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Escapora Heading & Value Copy */}
           <div className="lg:col-span-6 flex flex-col items-start">
             
             {/* Headline with Escapora Styling (Poppins Medium, tight letter spacing) */}
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-slate-900 tracking-[-0.03em] leading-[1.1] mb-6">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-medium text-slate-900 tracking-[-0.03em] leading-[1.1] mb-5 sm:mb-6">
               Discover the <br />
               <span className="text-red-600 font-medium">freshness with us.</span>
             </h2>
@@ -62,10 +62,10 @@ export default function DiscoverSection() {
 
           {/* Right Column: Escapora 3-Image Collage Grid */}
           <div className="lg:col-span-6">
-            <div className="grid grid-cols-12 gap-4 h-[480px] sm:h-[560px]">
+            <div className="grid grid-cols-12 gap-2.5 sm:gap-4 h-[360px] sm:h-[560px]">
               
               {/* Tall Image Left (7 cols) */}
-              <div className="col-span-7 relative rounded-3xl overflow-hidden shadow-xl bg-slate-100 group">
+              <div className="col-span-7 relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl bg-slate-100 group">
                 <Image
                   src="/images/food-pack.jpg"
                   alt="Airtight Food Vacuum Packing"
@@ -73,20 +73,20 @@ export default function DiscoverSection() {
                   sizes="(max-width: 1024px) 60vw, 30vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-4 left-4 bg-slate-950/70 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-medium text-white uppercase tracking-wider">
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-slate-950/70 backdrop-blur-md px-2.5 py-1 sm:px-3 rounded-full text-[9px] sm:text-[10px] font-medium text-white uppercase tracking-wider">
                   Food Grade Barrier
                 </div>
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-lg">
-                  <div className="text-xs font-medium text-slate-900">Curries & Spices Sealed</div>
-                  <div className="text-[11px] text-slate-500 font-normal">100% Aroma & Odor Sealed</div>
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl shadow-lg">
+                  <div className="text-[11px] sm:text-xs font-medium text-slate-900">Curries & Spices Sealed</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-normal">100% Aroma & Odor Sealed</div>
                 </div>
               </div>
 
               {/* Stacked Images Right (5 cols) */}
-              <div className="col-span-5 flex flex-col gap-4 h-full">
+              <div className="col-span-5 flex flex-col gap-2.5 sm:gap-4 h-full">
                 
                 {/* Top Stacked Image */}
-                <div className="relative flex-1 rounded-3xl overflow-hidden shadow-lg bg-slate-100 group">
+                <div className="relative flex-1 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-slate-100 group">
                   <Image
                     src="/images/luggage-pack.jpg"
                     alt="Luggage Space Compression"
@@ -94,13 +94,13 @@ export default function DiscoverSection() {
                     sizes="(max-width: 1024px) 40vw, 20vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute bottom-3 left-3 right-3 bg-red-600/90 backdrop-blur-md px-2.5 py-1 rounded-xl text-[10px] font-medium text-white text-center">
+                  <div className="absolute bottom-2.5 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 bg-red-600/90 backdrop-blur-md px-2 py-1 rounded-lg sm:rounded-xl text-[9px] sm:text-[10px] font-medium text-white text-center">
                     80% Space Saved
                   </div>
                 </div>
 
                 {/* Bottom Stacked Image */}
-                <div className="relative flex-1 rounded-3xl overflow-hidden shadow-lg bg-slate-100 group">
+                <div className="relative flex-1 rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-slate-100 group">
                   <Image
                     src="/images/leakproof-curry.jpg"
                     alt="Zero Leak Pressure Test"
@@ -108,7 +108,7 @@ export default function DiscoverSection() {
                     sizes="(max-width: 1024px) 40vw, 20vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-xl text-[10px] font-medium text-white text-center">
+                  <div className="absolute bottom-2.5 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded-lg sm:rounded-xl text-[9px] sm:text-[10px] font-medium text-white text-center">
                     0 Leaks on White Shirts
                   </div>
                 </div>

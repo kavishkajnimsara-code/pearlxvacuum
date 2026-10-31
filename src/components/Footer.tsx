@@ -10,11 +10,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-300 pt-20 pb-12 border-t border-slate-900">
+    <footer className="bg-slate-950 text-slate-300 pt-14 sm:pt-20 pb-24 sm:pb-12 border-t border-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-slate-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 sm:pb-16 border-b border-slate-900">
           
           {/* Logo & About Column (Span 2) */}
           <div className="lg:col-span-2 space-y-5">

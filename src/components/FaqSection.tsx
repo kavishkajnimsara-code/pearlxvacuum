@@ -63,21 +63,21 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-white relative">
+    <section id="faq" className="py-14 sm:py-20 lg:py-28 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em] mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em] mb-3 sm:mb-4">
             Frequently Asked <span className="text-red-600 font-medium">Questions.</span>
           </h2>
-          <p className="text-base text-slate-600 font-normal">
+          <p className="text-sm sm:text-base text-slate-600 font-normal">
             Everything you need to know about preparing your foods, clothes, and international travel packing.
           </p>
         </div>
 
         {/* Escapora Category Pill Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-8 sm:mb-10">
           {[
             { id: "all", label: "All Questions" },
             { id: "food", label: "Food & Curries" },
@@ -90,7 +90,7 @@ export default function FaqSection() {
                 setActiveTab(tab.id);
                 setOpenIdx(0);
               }}
-              className={`px-5 py-2.5 rounded-full text-xs font-medium transition-all ${
+              className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-medium transition-all ${
                 activeTab === tab.id
                   ? "bg-red-600 text-white shadow-md shadow-red-600/20"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
@@ -102,7 +102,7 @@ export default function FaqSection() {
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-3.5 sm:space-y-4">
           {filteredFaqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
@@ -116,14 +116,14 @@ export default function FaqSection() {
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full text-left px-7 py-5 flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full text-left px-5 py-4 sm:px-7 sm:py-5 flex items-center justify-between gap-3 sm:gap-4 focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-medium text-slate-900 tracking-tight">
+                  <span className="text-sm sm:text-lg font-medium text-slate-900 tracking-tight leading-snug">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                    className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen
                         ? "rotate-180 bg-red-600 text-white"
                         : "bg-slate-100 text-slate-600"
@@ -134,7 +134,7 @@ export default function FaqSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-7 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-red-100/60 animate-in fade-in-50 duration-200 font-normal">
+                  <div className="px-5 pb-5 sm:px-7 sm:pb-6 pt-1 text-xs sm:text-base text-slate-600 leading-relaxed border-t border-red-100/60 animate-in fade-in-50 duration-200 font-normal">
                     {faq.answer}
                   </div>
                 )}
@@ -144,7 +144,7 @@ export default function FaqSection() {
         </div>
 
         {/* Quick Assistance Strip */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+        <div className="mt-10 sm:mt-14 p-5 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
           <div>
             <div className="font-medium text-slate-900 text-base sm:text-lg">
               Have a specific question about your items?
@@ -153,11 +153,11 @@ export default function FaqSection() {
               Our packaging desk in Kirulapone is online 7 days a week.
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
             <a
               href="tel:0743678100"
               onClick={() => handleBtnClick("call")}
-              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium text-slate-700 bg-white border border-slate-200 hover:bg-slate-100 transition-all shadow-xs"
+              className="group w-full sm:w-auto justify-center inline-flex items-center gap-2 px-5 py-3 sm:py-2.5 rounded-full text-xs font-medium text-slate-700 bg-white border border-slate-200 hover:bg-slate-100 transition-all shadow-xs"
             >
               <Phone
                 className={`w-3.5 h-3.5 transition-all duration-300 ${
@@ -173,7 +173,7 @@ export default function FaqSection() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => handleBtnClick("wa")}
-              className={`inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-medium text-white transition-all shadow-md ${
+              className={`w-full sm:w-auto justify-center inline-flex items-center gap-2 px-6 py-3 sm:py-2.5 rounded-full text-xs font-medium text-white transition-all shadow-md ${
                 clickedBtn === "wa"
                   ? "bg-[#25D366] shadow-emerald-500/25"
                   : "bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] shadow-red-600/20"
