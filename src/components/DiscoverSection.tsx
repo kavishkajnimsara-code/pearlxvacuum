@@ -11,47 +11,44 @@ export default function DiscoverSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Escapora Heading & Value Copy */}
-          <div className="lg:col-span-6 flex flex-col items-start">
+          <div className="lg:col-span-6 flex flex-col items-center text-center">
             
             {/* Headline with Escapora Styling (Poppins Medium, tight letter spacing) */}
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-medium text-slate-900 tracking-[-0.03em] leading-[1.1] mb-5 sm:mb-6">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-medium text-slate-900 tracking-[-0.03em] leading-[1.1] mb-4 sm:mb-6">
               Discover the <br />
               <span className="text-red-600 font-medium">freshness with us.</span>
             </h2>
 
-            {/* Paragraph */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 font-normal">
-              From mom’s home-cooked chicken curries and roasted curry powders, to compressing winter jackets into carry-ons, we protect your essentials so you travel border-free without luggage spills or airline customs worries.
+            {/* Concise Paragraph */}
+            <p className="text-sm sm:text-lg text-slate-600 leading-relaxed mb-7 sm:mb-8 max-w-xl font-normal">
+              From home-cooked curries and spices to bulky winter jackets, we vacuum seal your travel essentials so you fly leak-free, odor-free, and customs-ready.
             </p>
 
-            <p className="text-sm text-slate-500 leading-relaxed mb-8 font-normal">
-              Whether you are an expat traveling to Australia, UK, or Canada, a student packing for winter university terms, or an artisan exporter shipping Ceylon spices — our Colombo vacuum sealing hub ensures pristine, certified protection.
-            </p>
-
-            {/* Feature Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-10 w-full">
+            {/* Compact Centered Feature Checklist */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-md w-full">
               {[
-                "100% Odor & Leak-Proof",
-                "Certified BPA-Free Food Grade",
-                "Up to 80% Space Reduction",
-                "15-Min Express Walk-ins",
-                "Airport Customs Compliant",
-                "Open 7 Days in Kirulapone",
+                "100% Leak & Odor-Proof",
+                "Up to 80% Space Saved",
+                "Airport Customs Ready",
+                "15-Min Walk-in Service",
               ].map((feat, idx) => (
-                <div key={idx} className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700">
-                  <div className="w-5 h-5 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 stroke-[2]" />
+                <div
+                  key={idx}
+                  className="flex items-center justify-center gap-2 bg-slate-50 border border-slate-200/80 rounded-2xl px-3 py-2.5 text-xs sm:text-sm font-medium text-slate-700"
+                >
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0">
+                    <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
                   </div>
                   <span>{feat}</span>
                 </div>
               ))}
             </div>
 
-            {/* Action Group: Pill Button & Phone */}
-            <div className="flex flex-wrap items-center gap-6">
+            {/* Action Group: Centered Pill Button */}
+            <div className="flex items-center justify-center">
               <a
                 href="#packages"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-medium text-white bg-red-600 hover:bg-red-700 shadow-md shadow-red-600/20 transition-all hover:scale-[1.02] active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white bg-red-600 hover:bg-red-700 shadow-md shadow-red-600/20 transition-all hover:scale-[1.02] active:scale-95"
               >
                 <span>Explore Packages</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -73,13 +70,6 @@ export default function DiscoverSection() {
                   sizes="(max-width: 1024px) 60vw, 30vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-slate-950/70 backdrop-blur-md px-2.5 py-1 sm:px-3 rounded-full text-[9px] sm:text-[10px] font-medium text-white uppercase tracking-wider">
-                  Food Grade Barrier
-                </div>
-                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-white/95 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl shadow-lg">
-                  <div className="text-[11px] sm:text-xs font-medium text-slate-900">Curries & Spices Sealed</div>
-                  <div className="text-[10px] sm:text-[11px] text-slate-500 font-normal">100% Aroma & Odor Sealed</div>
-                </div>
               </div>
 
               {/* Stacked Images Right (5 cols) */}
@@ -94,9 +84,6 @@ export default function DiscoverSection() {
                     sizes="(max-width: 1024px) 40vw, 20vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute bottom-2.5 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 bg-red-600/90 backdrop-blur-md px-2 py-1 rounded-lg sm:rounded-xl text-[9px] sm:text-[10px] font-medium text-white text-center">
-                    80% Space Saved
-                  </div>
                 </div>
 
                 {/* Bottom Stacked Image */}
@@ -108,9 +95,6 @@ export default function DiscoverSection() {
                     sizes="(max-width: 1024px) 40vw, 20vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute bottom-2.5 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded-lg sm:rounded-xl text-[9px] sm:text-[10px] font-medium text-white text-center">
-                    0 Leaks on White Shirts
-                  </div>
                 </div>
 
               </div>

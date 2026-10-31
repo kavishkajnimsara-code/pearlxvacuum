@@ -7,37 +7,37 @@ export default function BenefitsSection() {
     {
       icon: Sparkles,
       title: "Freshness Guaranteed",
-      headline: "Locks in Authentic Taste & Aroma",
+      headline: "Locks in Taste & Aroma",
       description:
-        "By eliminating 99.8% of oxygen, oxidation and spoilage stop dead in their tracks. Spices retain fresh-ground potency, cooked gravies preserve authentic savor, and pungent odors stay sealed.",
+        "Eliminates 99.8% of oxygen to lock in authentic spice potency, curry flavor, and pungent odors.",
       points: [
-        "Aroma-barrier multi-ply nylon films",
-        "Prevents freezer burn & moisture loss",
-        "Retains aroma freshness for over 12 months",
+        "Aroma-barrier nylon pouches",
+        "Zero freezer burn or moisture",
+        "12+ months aroma freshness",
       ],
     },
     {
       icon: ShieldCheck,
       title: "Hygienic Standards",
-      headline: "Professional Food-Grade Compliance",
+      headline: "Food-Grade Compliance",
       description:
-        "Sealed in a sanitized stainless facility using 100% BPA-free, FDA-compliant barrier pouches. Calibrated high-temp thermal impulse welders create dual-weld seams that survive cabin decompression.",
+        "Sealed in a sanitized facility using 100% BPA-free barrier pouches with double heat welds.",
       points: [
-        "100% BPA-free heavy barrier films",
-        "Dual-pulse heat sealing for 0 leaks",
-        "Sanitized stainless preparation area",
+        "100% BPA-free barrier films",
+        "Dual-weld seams for 0 leaks",
+        "Sanitized stainless prep area",
       ],
     },
     {
       icon: Clock,
       title: "Reliable Service",
-      headline: "Fast, Secure & Open 7 Days a Week",
+      headline: "Fast & Open 7 Days",
       description:
-        "Flying out tonight? Walk right into our Kirulapone facility. Most personal orders are completed in 15–20 minutes while you wait in our air-conditioned lounge. Zero advance booking needed.",
+        "Walk right into our Kirulapone hub—most orders are sealed in 15 minutes with zero booking needed.",
       points: [
-        "Walk-ins welcomed with zero wait",
-        "Open 7 days a week: 8:30 AM – 8:00 PM",
-        "Convenient Colombo spot with parking",
+        "Walk-ins welcome, zero wait",
+        "Open daily: 8:30 AM – 8:00 PM",
+        "Easy Colombo customer parking",
       ],
     },
   ];
@@ -99,27 +99,24 @@ export default function BenefitsSection() {
             return (
               <div
                 key={idx}
-                className="bg-white p-6 sm:p-9 rounded-3xl border border-slate-200/80 hover:border-red-300 shadow-lg shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1.5 flex flex-col group"
+                className="bg-white p-6 sm:p-9 rounded-3xl border border-slate-200/80 hover:border-red-300 shadow-lg shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center group"
               >
                 {/* Icon Circle */}
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-red-50 border border-red-100 text-red-600 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-105 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-red-50 border border-red-100 text-red-600 flex items-center justify-center mb-4 sm:mb-5 group-hover:scale-105 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-all duration-300">
                   <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
 
-                <div className="text-xs uppercase font-medium tracking-wider text-red-600 mb-1.5 sm:mb-2">
-                  {benefit.title}
-                </div>
-                <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2.5 sm:mb-3 tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-medium text-slate-900 mb-2.5 tracking-tight">
                   {benefit.headline}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed mb-6 sm:mb-8 font-normal">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5 sm:mb-6 font-normal max-w-xs">
                   {benefit.description}
                 </p>
 
                 {/* Subpoints */}
-                <div className="mt-auto pt-5 sm:pt-6 border-t border-slate-100 space-y-2.5">
+                <div className="mt-auto pt-4 sm:pt-5 border-t border-slate-100 space-y-2 w-full flex flex-col items-center">
                   {benefit.points.map((pt, pIdx) => (
-                    <div key={pIdx} className="flex items-center gap-2.5 text-xs text-slate-700 font-normal">
+                    <div key={pIdx} className="flex items-center justify-center gap-2 text-xs text-slate-700 font-normal">
                       <CheckCheck className="w-4 h-4 text-red-600 shrink-0" />
                       <span>{pt}</span>
                     </div>
@@ -150,9 +147,6 @@ export default function BenefitsSection() {
                     <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-slate-200 text-red-600 shadow-sm flex items-center justify-center group-hover:border-red-300 group-hover:bg-red-50 transition-colors">
                       <StepIcon className="w-7 h-7 sm:w-8 sm:h-8 text-red-600" />
                     </div>
-                    <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[11px] font-medium w-6 h-6 rounded-full flex items-center justify-center border-2 border-white shadow">
-                      {sIdx + 1}
-                    </span>
                   </div>
                   <h4 className="text-base sm:text-lg font-medium text-slate-900 mb-1.5 sm:mb-2">{st.title}</h4>
                   <p className="text-xs text-slate-600 max-w-xs leading-relaxed font-normal">{st.desc}</p>

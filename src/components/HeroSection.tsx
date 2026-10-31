@@ -14,7 +14,7 @@ export default function HeroSection() {
 
   return (
     <section className="bg-white px-2.5 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-4 sm:pb-8">
-      <div className="relative min-h-[78vh] sm:min-h-[88vh] flex items-center justify-center overflow-hidden rounded-[22px] sm:rounded-[36px] lg:rounded-[44px] bg-slate-950 text-white">
+      <div className="relative sm:min-h-[88vh] flex items-center justify-center overflow-hidden rounded-[22px] sm:rounded-[36px] lg:rounded-[44px] bg-slate-950 text-white">
         
         {/* Full-bleed Hero Background Image inside rounded container */}
         <div className="absolute inset-0 z-0">
@@ -32,7 +32,7 @@ export default function HeroSection() {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 py-14 sm:py-28 text-center flex flex-col items-center justify-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 py-9 sm:py-28 text-center flex flex-col items-center justify-center">
         
         {/* Main Headline */}
         <h1 className="mb-5 sm:mb-8 w-full flex flex-col items-center justify-center text-center cursor-default">

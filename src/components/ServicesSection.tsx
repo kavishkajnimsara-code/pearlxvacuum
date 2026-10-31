@@ -14,13 +14,12 @@ export default function ServicesSection() {
       title: "Food Vacuum Packing,",
       italicSubtitle: "Travel Flavor Shield",
       description:
-        "Whether it is mom's spicy chicken curry, polos, roasted curry powder, or dried sprats, our food-grade vacuum pouches guarantee 100% leak-proof and smell-proof security for global flights.",
+        "Keep cooked curries, spices, and dry fish 100% leak-proof, odor-free, and flight-ready in food-grade barrier pouches.",
       bullets: [
         "Cooked Curries & Gravies",
-        "Roasted Spices & Chili Powders",
-        "Dry Fish, Sprats & Maldive Fish",
-        "Traditional Sweets (Dodol, Halape)",
-        "Ceylon Tea Leaves & Cashews",
+        "Spices & Chili Powders",
+        "Dry Fish & Sprats",
+        "Sweets, Tea & Cashews",
       ],
       image: "/images/food-pack.jpg",
       badge: "Zero Odor & Leak Proof",
@@ -32,13 +31,12 @@ export default function ServicesSection() {
       title: "Clothing & Luggage,",
       italicSubtitle: "Space Compression",
       description:
-        "Tired of struggling to close your suitcase or paying hefty excess luggage fees? Our heavy-duty compression vacuum sealing flattens winter jackets, chunky knitwear, and blankets to save up to 80% volume.",
+        "Flatten bulky winter coats, sweaters, and bedding to save up to 80% suitcase space and avoid excess baggage fees.",
       bullets: [
-        "Bulky Winter Coats & Parkas",
-        "Woolen Sweaters & Knitwear",
-        "Bed Linen & Travel Pillows",
-        "Moisture & Mildew Protection",
-        "Fit Double Your Wardrobe",
+        "Winter Coats & Parkas",
+        "Sweaters & Knitwear",
+        "Duvets & Pillows",
+        "Moisture & Odor Shield",
       ],
       image: "/images/luggage-pack.jpg",
       badge: "Save Up To 80% Space",
@@ -50,13 +48,12 @@ export default function ServicesSection() {
       title: "Commercial Bulk Sealing,",
       italicSubtitle: "Exporter Standards",
       description:
-        "Tailored for local businesses, retailers, and artisans sending Ceylon spices, tea, dried fruits, and snack packs overseas. Professional industrial vacuum chamber machines ensure pristine retail finish.",
+        "Industrial chamber vacuum sealing for businesses and exporters shipping Ceylon spices, tea, and snacks worldwide.",
       bullets: [
-        "Certified Multi-Ply Food Bags",
-        "High-Volume Daily Batches",
-        "Airport Cargo Customs Compliant",
-        "Uniform Retail Pouch Finish",
-        "Volume Discounts for Exporters",
+        "Multi-Ply Export Pouches",
+        "High-Volume Batches",
+        "Cargo Customs Compliant",
+        "Exporter Bulk Rates",
       ],
       image: "/images/commercial-pack.jpg",
       badge: "Industrial B2B Grade",
@@ -132,8 +129,8 @@ export default function ServicesSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[420px] sm:min-h-[500px]">
             
             {/* Left Content Side (6 cols) */}
-            <div className="lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col justify-between order-2 lg:order-1">
-              <div>
+            <div className="lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col items-center justify-between text-center order-2 lg:order-1">
+              <div className="flex flex-col items-center w-full">
                 {/* Title + Subtitle */}
                 <h3 className="text-xl sm:text-4xl font-medium text-slate-900 mb-3 sm:mb-4 tracking-[-0.03em] leading-tight">
                   {pkg.title}{" "}
@@ -142,16 +139,19 @@ export default function ServicesSection() {
                   </span>
                 </h3>
 
-                <p className="text-xs sm:text-base text-slate-600 leading-relaxed mb-6 sm:mb-8 font-normal">
+                <p className="text-xs sm:text-base text-slate-600 leading-relaxed mb-6 sm:mb-8 max-w-md font-normal">
                   {pkg.description}
                 </p>
 
                 {/* Bullets Grid with Checkmarks */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-7 sm:mb-10">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3 mb-7 sm:mb-10 max-w-md w-full">
                   {pkg.bullets.map((bullet, bIdx) => (
-                    <div key={bIdx} className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700">
+                    <div
+                      key={bIdx}
+                      className="flex items-center justify-center gap-2 bg-slate-50 border border-slate-200/80 rounded-2xl px-3 py-2.5 text-xs sm:text-sm font-medium text-slate-700"
+                    >
                       <div className="w-4 h-4 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0">
-                        <Check className="w-3 h-3 stroke-[2]" />
+                        <Check className="w-3 h-3 stroke-[2.5]" />
                       </div>
                       <span>{bullet}</span>
                     </div>
@@ -159,8 +159,8 @@ export default function ServicesSection() {
                 </div>
               </div>
 
-              {/* Escapora Action Row: Red Pill + Phone Widget */}
-              <div className="flex flex-wrap items-center gap-6 pt-5 sm:pt-6 border-t border-slate-100">
+              {/* Escapora Action Row: Centered Compact Red Pill */}
+              <div className="flex items-center justify-center pt-5 sm:pt-6 border-t border-slate-100 w-full">
                 <a
                   href={`https://wa.me/94743678100?text=${encodeURIComponent(pkg.msg)}`}
                   target="_blank"
@@ -169,7 +169,7 @@ export default function ServicesSection() {
                     setPressedBtn("wa");
                     setTimeout(() => setPressedBtn(null), 600);
                   }}
-                  className={`w-full sm:w-auto justify-center inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white shadow-md transition-all hover:scale-[1.02] active:scale-95 ${
+                  className={`inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white shadow-md transition-all hover:scale-[1.02] active:scale-95 ${
                     pressedBtn === "wa"
                       ? "bg-[#25D366] shadow-emerald-500/25"
                       : "bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] shadow-red-600/20"

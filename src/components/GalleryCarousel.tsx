@@ -100,126 +100,66 @@ export default function GalleryCarousel() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex items-end justify-between mb-8 sm:mb-12 gap-4">
-          <div>
-            <h2 className="text-2xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em] leading-tight">
-              Visual Ad <span className="text-red-600 font-medium">Creative Showcase.</span>
-            </h2>
-          </div>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-5xl font-medium text-slate-900 tracking-[-0.03em] leading-tight">
+            Visual Ad <span className="text-red-600 font-medium">Creative Showcase.</span>
+          </h2>
+        </div>
 
-          {/* Controls: Prev, Next, Play/Pause */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-slate-200 hover:border-slate-300 text-slate-700 flex items-center justify-center transition-colors shadow-sm"
-              aria-label={isPlaying ? "Pause Slideshow" : "Play Slideshow"}
-            >
-              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
-            </button>
+        {/* Main Showcase Banner */}
+        <div className="relative rounded-3xl bg-slate-100 overflow-hidden shadow-xl border border-slate-200">
+          <div className="relative w-full h-64 sm:h-[420px] lg:h-[540px]">
+            <Image
+              src={slides[currentIndex].image}
+              alt={slides[currentIndex].title}
+              fill
+              sizes="100vw"
+              className="object-cover transition-all duration-700 ease-in-out"
+              priority
+            />
+
+            {/* Left Arrow Inside Image */}
             <button
               onClick={handlePrev}
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
+              className={`absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
                 pressedBtn === "prev"
-                  ? "bg-red-600 text-white border-red-600 shadow-md shadow-red-600/30"
-                  : "bg-white text-slate-700 border-slate-200 hover:bg-red-600 hover:text-white hover:border-red-600 hover:shadow-md hover:shadow-red-600/20 shadow-sm"
+                  ? "bg-red-600 text-white border-red-600 shadow-lg shadow-red-600/30"
+                  : "bg-white/90 backdrop-blur-sm text-slate-800 border-white/60 hover:bg-red-600 hover:text-white hover:border-red-600 shadow-lg"
               }`}
               aria-label="Previous Slide"
             >
-              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
+
+            {/* Right Arrow Inside Image */}
             <button
               onClick={handleNext}
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
+              className={`absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full border transition-all duration-200 flex items-center justify-center hover:scale-105 active:scale-95 ${
                 pressedBtn === "next"
-                  ? "bg-red-600 text-white border-red-600 shadow-md shadow-red-600/30"
-                  : "bg-white text-slate-700 border-slate-200 hover:bg-red-600 hover:text-white hover:border-red-600 hover:shadow-md hover:shadow-red-600/20 shadow-sm"
+                  ? "bg-red-600 text-white border-red-600 shadow-lg shadow-red-600/30"
+                  : "bg-white/90 backdrop-blur-sm text-slate-800 border-white/60 hover:bg-red-600 hover:text-white hover:border-red-600 shadow-lg"
               }`}
               aria-label="Next Slide"
             >
-              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
 
-        {/* Main Showcase Banner */}
-        <div className="relative rounded-3xl bg-slate-950 text-white overflow-hidden shadow-2xl border border-slate-800">
-          <div className="grid grid-cols-1 lg:grid-cols-12 lg:min-h-[500px]">
-            
-            {/* Visual Image Side */}
-            <div className="relative lg:col-span-7 h-60 sm:h-96 lg:h-full bg-slate-900">
-              <Image
-                src={slides[currentIndex].image}
-                alt={slides[currentIndex].title}
-                fill
-                sizes="(max-width: 1024px) 100vw, 60vw"
-                className="object-cover transition-all duration-700 ease-in-out"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-slate-950" />
-              
-              {/* Top Badge */}
-              <div className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 bg-red-600/90 backdrop-blur-md text-white text-[11px] sm:text-xs font-medium px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                <span>{slides[currentIndex].badge}</span>
-              </div>
-            </div>
-
-            {/* Content Side */}
-            <div className="lg:col-span-5 p-6 sm:p-12 flex flex-col justify-between bg-slate-950">
-              <div>
-                <h3 className="text-xl sm:text-3xl font-medium text-white mb-3 sm:mb-4 tracking-[-0.03em] leading-tight">
-                  {slides[currentIndex].title}
-                </h3>
-
-                <p className="text-slate-300 text-xs sm:text-base leading-relaxed mb-5 sm:mb-6 font-normal">
-                  {slides[currentIndex].subtitle}
-                </p>
-
-                {/* Key Spec Card */}
-                <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-3.5 sm:p-4 mb-5 sm:mb-6">
-                  <div className="text-[11px] uppercase tracking-wider text-slate-400 font-medium mb-1">
-                    Verified Outcome
-                  </div>
-                  <div className="text-xs sm:text-sm font-medium text-red-400 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>{slides[currentIndex].stat}</span>
-                  </div>
-                  <div className="text-xs text-slate-300 mt-1.5 sm:mt-2 font-normal leading-relaxed">
-                    "{slides[currentIndex].quote}"
-                  </div>
-                </div>
-              </div>
-
-              {/* Slide Buttons / Indicators */}
-              <div className="pt-5 sm:pt-6 border-t border-slate-800 flex items-center justify-between gap-3">
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  {slides.map((_, dotIdx) => (
-                    <button
-                      key={dotIdx}
-                      onClick={() => setCurrentIndex(dotIdx)}
-                      className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
-                        currentIndex === dotIdx
-                          ? "w-6 sm:w-8 bg-red-600"
-                          : "w-2 sm:w-2.5 bg-slate-800 hover:bg-slate-600"
-                      }`}
-                      aria-label={`Jump to slide ${dotIdx + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <a
-                  href="https://wa.me/94743678100?text=Hi%20Pearl-X%2C%20I%20saw%20your%20showcase%20and%20want%20to%20get%20my%20items%20packed."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-white bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] px-4 sm:px-5 py-2.5 rounded-full transition-all shadow-md shadow-red-600/20 shrink-0"
-                >
-                  <span>Book This Now</span>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
+        {/* Slide Indicators */}
+        <div className="mt-6 flex items-center justify-center gap-2">
+          {slides.map((_, dotIdx) => (
+            <button
+              key={dotIdx}
+              onClick={() => setCurrentIndex(dotIdx)}
+              className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
+                currentIndex === dotIdx
+                  ? "w-6 sm:w-8 bg-red-600"
+                  : "w-2 sm:w-2.5 bg-slate-300 hover:bg-slate-400"
+              }`}
+              aria-label={`Jump to slide ${dotIdx + 1}`}
+            />
+          ))}
         </div>
 
       </div>
