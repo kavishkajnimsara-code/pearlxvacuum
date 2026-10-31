@@ -146,11 +146,7 @@ export default function Footer() {
         </div>
 
         {/* Escapora Bottom Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div>
-            2026 Pearl-X Vacuum Solutions. | Designed with ❤️ for global travelers.
-          </div>
-
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-end gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-6">
             <span>Keep it fresh. Keep it secure.</span>
             <button
