@@ -54,7 +54,7 @@ export default function HeroSection() {
         </p>
 
         {/* Two-CTA Group: Primary WhatsApp + Secondary Call */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
           
           {/* Primary CTA Button */}
           <a
@@ -62,7 +62,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleBtnClick("wa")}
-            className={`group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-7 sm:px-11 py-3.5 sm:py-4.5 rounded-full text-sm sm:text-lg font-medium shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 text-center ${
+            className={`group inline-flex items-center justify-center gap-2 sm:gap-3 px-7 sm:px-11 py-3 sm:py-4.5 rounded-full text-sm sm:text-lg font-medium shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 text-center ${
               clickedBtn === "wa"
                 ? "bg-[#25D366] text-white shadow-emerald-500/30"
                 : "bg-white text-slate-900 hover:bg-[#25D366] hover:text-white active:bg-[#25D366] active:text-white"
@@ -86,7 +86,7 @@ export default function HeroSection() {
           <a
             href="tel:0743678100"
             onClick={() => handleBtnClick("call")}
-            className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-7 sm:px-11 py-3.5 sm:py-4.5 rounded-full text-sm sm:text-lg font-medium text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all duration-300 hover:scale-[1.02] active:scale-95 text-center"
+            className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-7 sm:px-11 py-3 sm:py-4.5 rounded-full text-sm sm:text-lg font-medium text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all duration-300 hover:scale-[1.02] active:scale-95 text-center"
           >
             <Phone
               className={`w-4.5 h-4.5 sm:w-5 sm:h-5 transition-all duration-300 ${
