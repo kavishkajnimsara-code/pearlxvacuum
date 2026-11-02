@@ -10,9 +10,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Pearl-X | Export Quality Vacuum Packing & Travel Sealing Colombo",
+  title: "Pearl-X | Running Out of Suitcase Space? Pack 3X More.",
   description:
-    "Export quality vacuum packing in Colombo for food, curries, spices, dry fish, and luggage clothing. 100% leak-proof, airport customs compliant, open 7 days a week.",
+    "Don't leave your favorite food or clothes behind. Professional vacuum sealing in Colombo that saves up to 80% luggage space, keeps food 100% leak-proof, and guarantees freshness on every flight.",
   keywords: [
     "pearl-x vacuum packing",
     "food vacuum packing colombo",
@@ -22,6 +22,20 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: "/images/pearl-x-logo.png",
+  },
+  openGraph: {
+    title: "Running Out of Suitcase Space? Pack 3X More. | Pearl-X Vacuum Packing",
+    description:
+      "Don't leave your favorite food or clothes behind. Professional vacuum sealing that saves up to 80% luggage space, keeps food 100% leak-proof, and guarantees freshness on every flight.",
+    siteName: "Pearl-X Vacuum Packing",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Running Out of Suitcase Space? Pack 3X More. | Pearl-X Vacuum Packing",
+    description:
+      "Don't leave your favorite food or clothes behind. Professional vacuum sealing that saves up to 80% luggage space, keeps food 100% leak-proof, and guarantees freshness on every flight.",
   },
 };
 
