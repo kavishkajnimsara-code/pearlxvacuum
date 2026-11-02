@@ -24,7 +24,7 @@ export default function HeroSection() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center filter brightness-[0.40] contrast-[1.08] scale-105 transition-transform duration-1000"
+            className="object-cover object-center opacity-50 filter brightness-[0.40] contrast-[1.08] scale-105 transition-transform duration-1000"
           />
           {/* Soft Vignette & Gradient Overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/70" />
