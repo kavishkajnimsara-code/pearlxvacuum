@@ -143,54 +143,6 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* Quick Assistance Strip */}
-        <div className="mt-10 sm:mt-14 p-5 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
-          <div>
-            <div className="font-medium text-slate-900 text-base sm:text-lg">
-              Have a specific question about your items?
-            </div>
-            <div className="text-xs text-slate-500 mt-1 font-normal">
-              Our packaging desk in Kirulapone is online 7 days a week.
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
-            <a
-              href="tel:0743678100"
-              onClick={() => handleBtnClick("call")}
-              className="group w-full sm:w-auto justify-center inline-flex items-center gap-2 px-5 py-3 sm:py-2.5 rounded-full text-xs font-medium text-slate-700 bg-white border border-slate-200 hover:bg-slate-100 transition-all shadow-xs"
-            >
-              <Phone
-                className={`w-3.5 h-3.5 transition-all duration-300 ${
-                  clickedBtn === "call"
-                    ? "text-red-600 fill-red-600 scale-110"
-                    : "text-slate-500 group-hover:text-red-600 group-hover:fill-red-600 group-active:text-red-600 group-active:fill-red-600"
-                }`}
-              />
-              <span>074 367 8100</span>
-            </a>
-            <a
-              href="https://wa.me/94743678100?text=Hi%20Pearl-X%2C%20I%20have%20a%20question%20about%20vacuum%20packing."
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => handleBtnClick("wa")}
-              className={`w-full sm:w-auto justify-center inline-flex items-center gap-2 px-6 py-3 sm:py-2.5 rounded-full text-xs font-medium text-white transition-all shadow-md ${
-                clickedBtn === "wa"
-                  ? "bg-[#25D366] shadow-emerald-500/25"
-                  : "bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] shadow-red-600/20"
-              }`}
-            >
-              <Image
-                src="/images/whatsapp-cta.png"
-                alt="WhatsApp"
-                width={14}
-                height={14}
-                className="w-3.5 h-3.5 object-contain"
-              />
-              <span>Ask on WhatsApp</span>
-            </a>
-          </div>
-        </div>
-
       </div>
     </section>
   );
