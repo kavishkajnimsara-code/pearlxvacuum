@@ -38,17 +38,17 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+        <div className="space-y-8 sm:space-y-12">
           
-          {/* Left Column: Direct Info Cards & Escapora Inquiry Form */}
-          <div className="lg:col-span-6 space-y-5 sm:space-y-6">
+          {/* Top Section: Direct Info Cards & Quote Form */}
+          <div className="max-w-4xl mx-auto space-y-5 sm:space-y-6">
             
             {/* Quick Contact Info Strip */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               
               {/* Hotline Card */}
-              <div className="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
+              <div className="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col items-center text-center justify-between">
+                <div className="flex flex-col items-center">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-3.5 sm:mb-4">
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
@@ -75,8 +75,8 @@ export default function ContactSection() {
               </div>
 
               {/* Working Hours Card */}
-              <div className="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
+              <div className="bg-white p-5 sm:p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col items-center text-center justify-between">
+                <div className="flex flex-col items-center">
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-3.5 sm:mb-4">
                     <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
@@ -100,13 +100,13 @@ export default function ContactSection() {
 
             {/* Escapora "Request a Quote" Form Card */}
             <div className="bg-white p-5 sm:p-9 rounded-3xl border border-slate-200 shadow-xl">
-              <div className="flex items-center gap-2 mb-2">
+              <div className="flex items-center justify-center gap-2 mb-2">
                 <MessageCircle className="w-5 h-5 text-red-600" />
                 <h3 className="text-lg sm:text-xl font-medium text-slate-900 tracking-tight">
                   Request a Quote
                 </h3>
               </div>
-              <p className="text-xs text-slate-500 mb-5 sm:mb-6 font-normal">
+              <p className="text-xs text-slate-500 mb-5 sm:mb-6 font-normal text-center">
                 Tell us what you need packed and we'll instantly connect you with our Kirulapone packing desk.
               </p>
 
@@ -195,12 +195,12 @@ export default function ContactSection() {
 
           </div>
 
-          {/* Right Column: Google Maps Location Embed & Directions */}
-          <div className="lg:col-span-6 flex flex-col h-full">
-            <div className="bg-white p-3 sm:p-4 rounded-3xl border border-slate-200 shadow-xl flex flex-col gap-3 h-full">
+          {/* Full-Width Single Screen Google Maps Location Embed & Directions */}
+          <div className="w-full">
+            <div className="bg-white p-3 sm:p-4 rounded-3xl border border-slate-200 shadow-xl flex flex-col gap-3">
               
-              {/* Responsive Google Maps Iframe with Curved Corners */}
-              <div className="relative w-full min-h-[320px] sm:min-h-[460px] lg:min-h-[540px] flex-1 bg-slate-100 rounded-2xl overflow-hidden">
+              {/* Responsive Full-Width Google Maps Iframe with Curved Corners */}
+              <div className="relative w-full h-[380px] sm:h-[480px] lg:h-[560px] bg-slate-100 rounded-2xl overflow-hidden">
                 <iframe
                   title="Pearl-X Kirulapone Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0772!2d79.8732485!3d6.8835212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b0039034a5d%3A0x7c39e9bdd879392e!2sPearl%20-%20X%20%23Vacuum%20Packing!5e0!3m2!1sen!2slk!4v1730200000000!5m2!1sen!2slk"
@@ -210,7 +210,7 @@ export default function ContactSection() {
                   allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full min-h-[320px] sm:min-h-[460px] lg:min-h-[540px]"
+                  className="w-full h-full"
                 />
               </div>
 
