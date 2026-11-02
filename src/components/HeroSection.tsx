@@ -24,11 +24,10 @@ export default function HeroSection() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-50 filter brightness-[0.40] contrast-[1.08] scale-105 transition-transform duration-1000"
+            className="object-cover object-center filter brightness-[0.55] contrast-[1.05] scale-105 transition-transform duration-1000"
           />
           {/* Soft Vignette & Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/70" />
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-slate-950/30 to-slate-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/35 to-slate-950/50" />
         </div>
 
         {/* Content Container */}
@@ -36,10 +35,10 @@ export default function HeroSection() {
         
         {/* Main Headline */}
         <h1 className="mb-5 sm:mb-8 w-full flex flex-col items-center justify-center text-center cursor-default">
-          <span className="block text-center text-[1.7rem] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-[-0.03em] leading-[1.15] text-white sm:whitespace-nowrap transition-transform duration-300 ease-out hover:scale-[1.03] hover:-translate-y-1">
+          <span className="block text-center text-[1.7rem] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-[-0.03em] leading-[1.15] text-white [text-shadow:0_4px_24px_rgba(0,0,0,0.9),0_2px_6px_rgba(0,0,0,0.85)] sm:whitespace-nowrap transition-transform duration-300 ease-out hover:scale-[1.03] hover:-translate-y-1">
             Running Out of <br className="sm:hidden" /> Suitcase Space?
           </span>
-          <span className="group/pack block text-center text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-bold tracking-[-0.04em] leading-[1.08] text-red-500 mt-2 sm:mt-4 whitespace-nowrap transition-transform duration-300 ease-out hover:scale-[1.03] hover:-translate-y-1">
+          <span className="group/pack block text-center text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-bold tracking-[-0.04em] leading-[1.08] text-red-500 [text-shadow:0_6px_28px_rgba(0,0,0,0.95),0_2px_8px_rgba(0,0,0,0.85)] mt-2 sm:mt-4 whitespace-nowrap transition-transform duration-300 ease-out hover:scale-[1.03] hover:-translate-y-1">
             Pack{" "}
             <span className="inline-block transition-all duration-300 ease-out group-hover/pack:scale-125 group-hover/pack:mx-2 sm:group-hover/pack:mx-4">
               3X
@@ -49,7 +48,7 @@ export default function HeroSection() {
         </h1>
 
         {/* Sub-headline */}
-        <p className="text-sm sm:text-xl md:text-2xl lg:text-[1.5rem] text-slate-200 font-normal leading-relaxed max-w-4xl mb-8 sm:mb-12 px-1 transition-all duration-300 ease-out hover:text-white hover:scale-[1.01] hover:-translate-y-0.5 cursor-default">
+        <p className="text-sm sm:text-xl md:text-2xl lg:text-[1.5rem] text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.95),0_1px_4px_rgba(0,0,0,0.9)] font-normal leading-relaxed max-w-4xl mb-8 sm:mb-12 px-1 transition-all duration-300 ease-out hover:scale-[1.01] hover:-translate-y-0.5 cursor-default">
           Don't leave your favorite food or clothes behind. Professional vacuum sealing that saves up to 80% luggage space, keeps food 100% leak-proof, and guarantees freshness on every flight.
         </p>
 
