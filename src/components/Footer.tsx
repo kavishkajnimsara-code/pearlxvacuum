@@ -144,9 +144,12 @@ export default function Footer() {
               >
                 074 367 8100
               </a>
-              <div className="text-slate-400">
-                WhatsApp: +94 74 367 8100
-              </div>
+              <a
+                href="mailto:info@pearlxceylon.com"
+                className="block text-slate-300 hover:text-red-400 transition-colors"
+              >
+                info@pearlxceylon.com
+              </a>
               <div className="pt-1 text-slate-400">
                 Mon – Sun: 8:30 AM – 8:00 PM
               </div>

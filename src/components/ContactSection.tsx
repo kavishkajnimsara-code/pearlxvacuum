@@ -60,9 +60,12 @@ export default function ContactSection() {
                 >
                   074 367 8100
                 </a>
-                <div className="text-xs text-slate-500 mt-1 font-normal">
-                  Open 7 Days • Call anytime
-                </div>
+                <a
+                  href="mailto:info@pearlxceylon.com"
+                  className="text-xs sm:text-sm text-slate-600 hover:text-red-600 transition-colors mt-1 font-normal"
+                >
+                  info@pearlxceylon.com
+                </a>
               </div>
 
               {/* Working Hours Card */}
