@@ -129,7 +129,7 @@ export default function ServicesSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[420px] sm:min-h-[500px]">
             
             {/* Left Content Side (6 cols) */}
-            <div className="lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col items-center justify-between text-center order-2 lg:order-1">
+            <div className="lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col items-center justify-center text-center order-2 lg:order-1">
               <div className="flex flex-col items-center w-full">
                 {/* Title + Subtitle */}
                 <h3 className="text-xl sm:text-4xl font-medium text-slate-900 mb-3 sm:mb-4 tracking-[-0.03em] leading-tight">
@@ -144,7 +144,7 @@ export default function ServicesSection() {
                 </p>
 
                 {/* Bullets Grid with Checkmarks */}
-                <div className="grid grid-cols-2 gap-2.5 sm:gap-3 mb-7 sm:mb-10 max-w-md w-full">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3 max-w-md w-full">
                   {pkg.bullets.map((bullet, bIdx) => (
                     <div
                       key={bIdx}
@@ -158,34 +158,6 @@ export default function ServicesSection() {
                   ))}
                 </div>
               </div>
-
-              {/* Escapora Action Row: Centered Compact Red Pill */}
-              <div className="flex items-center justify-center pt-5 sm:pt-6 border-t border-slate-100 w-full">
-                <a
-                  href={`https://wa.me/94743678100?text=${encodeURIComponent(pkg.msg)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    setPressedBtn("wa");
-                    setTimeout(() => setPressedBtn(null), 600);
-                  }}
-                  className={`inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs sm:text-sm font-medium text-white shadow-md transition-all hover:scale-[1.02] active:scale-95 ${
-                    pressedBtn === "wa"
-                      ? "bg-[#25D366] shadow-emerald-500/25"
-                      : "bg-red-600 hover:bg-[#25D366] active:bg-[#25D366] shadow-red-600/20"
-                  }`}
-                >
-                  <Image
-                    src="/images/whatsapp-cta.png"
-                    alt="WhatsApp"
-                    width={16}
-                    height={16}
-                    className="w-4 h-4 object-contain"
-                  />
-                  <span>{pkg.cta}</span>
-                </a>
-              </div>
-
             </div>
 
             {/* Right Image Side (6 cols) */}
